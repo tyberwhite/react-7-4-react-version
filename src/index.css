@@ -1,13 +1,122 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --darkGrey: rgb(132, 131, 131);
+  --lightGrey: lightgrey;
+  --tomato: #ff6347;
+}
+
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-left: 5px solid var(--lightGrey);
+}
+
+header,
+main,
+footer {
+  padding: 1rem 2rem;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 200;
+  color: var(--tomato);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.header-nav {
+  margin-top: 1.5rem;
+}
+.header-nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+.header-nav ul li {
+  border-bottom: 1px solid var(--darkGrey);
+}
+
+.header-nav ul li a {
+  text-decoration: none;
+  color: var(--darkGrey);
+}
+
+time {
+  color: var(--darkGrey);
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+
+.blogpost-title {
+  font-size: 3em;
+  font-weight: 200;
+  margin: 0.5rem 0;
+}
+
+img {
+  width: 100%;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--darkGrey);
+}
+
+p {
+  margin-top: 1rem;
+  color: var(--darkGrey);
+  font-weight: 200;
+}
+
+p::first-letter {
+  font-size: 5rem;
+  margin-right: 1rem;
+  float: left;
+}
+
+aside {
+  text-align: right;
+}
+
+ul {
+  list-style: none;
+}
+
+aside a {
+  color: var(--tomato);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p .header-nav ul li a {
+  text-decoration: none;
+  color: var(--darkGrey);
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.footer-nav ul li a {
+  color: var(--tomato);
+  text-decoration: none;
+}
+
+footer span {
+  color: var(--darkGrey);
 }
